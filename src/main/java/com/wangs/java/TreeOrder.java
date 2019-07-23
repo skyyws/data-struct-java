@@ -22,29 +22,6 @@ public class TreeOrder {
         floorOrder(root);
     }
 
-    public static TreeNode buildTree() {
-        TreeNode node15 = new TreeNode(15);
-        TreeNode node14 = new TreeNode(14);
-        TreeNode node13 = new TreeNode(13);
-        TreeNode node12 = new TreeNode(12);
-        TreeNode node11 = new TreeNode(11);
-        TreeNode node10 = new TreeNode(10);
-        TreeNode node9 = new TreeNode(9);
-        TreeNode node8 = new TreeNode(8);
-
-        TreeNode node4 = new TreeNode(4, node8, node9);
-        TreeNode node5 = new TreeNode(5, node10, node11);
-        TreeNode node6 = new TreeNode(6, node12, node13);
-        TreeNode node7 = new TreeNode(7, node14, node15);
-
-        TreeNode node2 = new TreeNode(2, node4, node5);
-        TreeNode node3 = new TreeNode(3, node6, node7);
-
-        TreeNode node1 = new TreeNode(1, node2, node3);
-
-        return node1;
-    }
-
     public static void preOrder(TreeNode root) {
         if (root == null) {
             return;
@@ -98,46 +75,28 @@ public class TreeOrder {
             System.out.print(i + " ");
         }
     }
-}
 
-class TreeNode {
-    int value;
-    TreeNode left;
-    TreeNode right;
+    public static TreeNode buildTree() {
+        TreeNode node15 = new TreeNode(15);
+        TreeNode node14 = new TreeNode(14);
+        TreeNode node13 = new TreeNode(13);
+        TreeNode node12 = new TreeNode(12);
+        TreeNode node11 = new TreeNode(11);
+        TreeNode node10 = new TreeNode(10);
+        TreeNode node9 = new TreeNode(9);
+        TreeNode node8 = new TreeNode(8);
 
-    public TreeNode(int value) {
-        this.value = value;
-        left = null;
-        right = null;
-    }
+        TreeNode node4 = new TreeNode(4, node8, node9);
+        TreeNode node5 = new TreeNode(5, node10, node11);
+        TreeNode node6 = new TreeNode(6, node12, node13);
+        TreeNode node7 = new TreeNode(7, node14, node15);
 
-    public TreeNode(int value, TreeNode left, TreeNode right) {
-        this.value = value;
-        this.left = left;
-        this.right = right;
-    }
+        TreeNode node2 = new TreeNode(2, node4, node5);
+        TreeNode node3 = new TreeNode(3, node6, node7);
 
-    public int getValue() {
-        return value;
-    }
+        TreeNode node1 = new TreeNode(1, node2, node3);
 
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    public TreeNode getLeft() {
-        return left;
-    }
-
-    public void setLeft(TreeNode left) {
-        this.left = left;
-    }
-
-    public TreeNode getRight() {
-        return right;
-    }
-
-    public void setRight(TreeNode right) {
-        this.right = right;
+        return node1;
     }
 }
+
